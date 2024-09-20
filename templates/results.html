@@ -1,0 +1,43 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    {{search_term}}
+{% endblock %}
+
+{% block main %}
+<div class="container-fluid bg-secondary">
+    <div class="container">
+        <p class="text-light p-2 ps-5">
+            Because you searched: {{search_term}}
+        </p>
+    </div>
+</div>
+<div class="container">
+    <div class="container">
+        {% for movie in movies %}
+            {% if loop.index0 % 5 == 0 %}
+                <div class="row justify-content-between mb-4">
+            {% endif %}
+                    <div class="col-2">
+                        {% if movie['id'] != 'NotFound' %}
+                        <a href="/movie?id={{movie['id']}}&title={{movie['title']}}">
+                            <div class="card bg-secondary text-center text-light">
+                                <img  src="https://image.tmdb.org/t/p/w500{{ movie['poster_path'] }}" alt="Poster for {{ movie['title'] }}">
+                                <p class="pt-3">{{ movie['title'] }}</p>
+                            </div>
+                        </a>
+                        {% else%}
+                            <div class="card bg-secondary text-center">
+                                <img  src="/static/poster_not_found.png" alt="Poster not found">
+                                <p class="pt-3">{{ movie['title'] }}</p>
+                            </div>
+                        {% endif %}
+                    </div>
+            {% if (loop.index0 + 1) % 5 == 0 or loop.last %}
+                </div>
+            {% endif %}
+        {% endfor %}
+    </div>
+</div>
+
+{% endblock %}

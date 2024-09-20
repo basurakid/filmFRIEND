@@ -1,0 +1,44 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    {{movie_data['title']}}
+{% endblock %}
+
+{% block main %}
+<div class="container-fluid text-light py-5">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <img src="https://image.tmdb.org/t/p/w500{{ movie_data['poster_path'] }}" alt="Poster for {{ movie_data['title'] }}">
+            </div>
+            <div class="col">
+                <div class="row">
+                    <h2>{{ movie_data['title'] }} </h2>
+                </div>
+                <div class="row d-flex align-items-start">
+                    {% for genre in movie_data['genres']%}
+                    <div class="col-auto">
+                        <span class="badge primary-bgcolor dark-text">{{genre['name']}}</span>
+                    </div>
+                    {% endfor %}
+                </div>
+                <div class="row py-3">
+                    <p>{{movie_data['overview']}}</p>
+                </div>
+                <div class="row">
+                    <h4>Cast</h4>
+                    <p>
+                        {{movie_cast}}
+                    </p>
+
+                </div>
+                <div class="row">
+                    <h4>Director</h4>
+                    <p>{{movie_director}}</p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

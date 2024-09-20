@@ -1,0 +1,158 @@
+.primary-bgcolor{
+    background-color: #f6c41f;
+}
+
+.accent-bgcolor{
+    background-color: #546371;
+}
+
+.dark-bgcolor{
+    background-color: #1f1111;
+}
+
+.film-home{
+    font-size: 5.5rem;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+}
+
+.friend-home{
+    font-size: 5rem;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-style: italic;
+    text-shadow: 5px 0px 0px rgba(190, 87, 32, 100);
+}
+
+.dark-text{
+    color: #1f1111;
+}
+
+.full-vh{
+    height: 90vh;
+}
+.full-vw{
+    width: 100vw;
+}
+
+.home-input{
+    max-width: 500px;
+}
+
+.search-bar
+{
+    width: 40vw;
+}
+
+.friend-navbar{
+    font-size: 2.5rem;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-style: italic;
+    text-shadow: 3px 0px 0px rgba(190, 87, 32, 100);
+}
+
+.film-navbar{
+    font-size: 2.5rem;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+}
+
+.separator-vertical
+{
+    border-right: 2px solid #0174f3;
+    height: 100vh;
+}
+
+.small-input
+{
+    max-width: 40%;
+}
+
+.footer-icon
+{
+    font-size: 3rem;
+}
+
+.maxsize_img
+{
+    max-width:250px;
+}
+
+@font-face{
+    font-family: 'Montserrat';
+    src: url('/static/fonts/Montserrat-SemiBoldItalic.woff') format('woff');
+    font-weight: 600;
+    font-style: italic;
+}
+
+@font-face{
+    font-family: 'Montserrat';
+    src: url('/static/fonts/Montserrat-Medium.woff') format('woff');
+    font-weight: 500;
+}
+
+@font-face{
+    font-family: 'Montserrat';
+    src: url('/static/fonts/Montserrat-Regular.woff') format('woff');
+    font-weight:400;
+}
+
+.montserrat-regular
+{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+}
+
+
+#suggestions {
+    border: 1px solid #ccc;
+    max-height: 200px;
+    overflow-y: auto;
+    position: relative;
+    background-color: white;
+    width: 100%;
+    z-index: 1000;
+}
+
+#suggestions div {
+    padding: 10px;
+    cursor: pointer;
+}
+
+#suggestions div:hover {
+    background-color: #f0f0f0;
+}
+
+.row-result {
+display: flex;
+flex-wrap: wrap;
+}
+
+.col-result {
+flex: 1 0 20%; /* Adjust the percentage as needed */
+max-width: 20%;
+}
+
+.card-result img {
+width: 90%; /* Ensure the image takes up the full width of the card */
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+#footer {
+    margin-top: auto;
+}
